@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+  <title>Quiz Hero</title>
+</head>
+
+<body class="bg-white font-common">
+  <!-- Header/Navbar section start -->
+  <header class="h-16 flex items-center shadow-sm">
+    <nav class="flex justify-between items-center w-9/12 mx-auto">
+      <div class="text-zinc-800 font-bold uppercase">
+        <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+        <p class="text-[10px] font-normal capitalize -mt-1">
+          Get ready to Quiz and be amazed!
+        </p>
+      </div>
+      <a href="index.html"> <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+          Home
+        </button>
+      </a>
+    </nav>
+  </header>
+  <!-- Header/Navbar section end -->
+
+  <!-- Blog section -->
+  <div id="accordion-open" class="pt-10 lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center" data-accordion="open">
+    <h2 id="accordion-open-heading-1">
+      <button type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl"
+        data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
+        <span class="flex items-center"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+              clip-rule="evenodd"></path>
+          </svg>What are the differences among map, forEach, filter and find methods?</span>
+        <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+      <div class="p-5 border border-b-0">
+        <p class="my-2 text-black"> <span class="font-bold">map():</span> This method usually return a new array with
+          the results of calling function. This function will be called for each elements of previous array.
+          <br>
+          <span class="font-semibold">Example: </span><br>
+        <div
+          class="bg-gray-800 text-left pl-2 md:pl-10 text-white text-leftpl-2 broder rounded-lg py-2 mx-2 md:mx-40 mb-2">
+          <code>
+              const asif = [1, 4, 9, 16]; <br>
+              const newArray = asif.map(x => x * 2); <br>
+              console.log(newArray); // Output: [2, 8, 18, 32] <br>
+            </code>
+        </div>
+        </p>
+        <hr>
+        <p class="my-2 text-black"> <span class="font-bold">forEach():</span> This method allows us to loop through an
+          array and execute a function on each element of an array.
+          <br>
+          <span class="font-semibold">Example: </span><br>
+        <div
+          class="bg-gray-800 text-left pl-2 md:pl-10 text-white text-leftpl-2 broder rounded-lg py-2 mx-2 md:mx-40 mb-2">
+          <code>
+              const asif = [1, 2, 3, 4]; <br>
+              asif.forEach(function(element) { <br>
+                console.log(element); <br>
+              }); // output: 1 2 3 4 5
+            </code>
+        </div>
+        </p>
+        <p class="text-black font-semibold">Main difference between map() and forEach() is map method has return where
+          forEach hasn't.</p>
+        <hr>
+        <p class="my-2 text-black"> <span class="font-bold">filter():</span> This method creates a new array with all
+          the elements that pass a test defined by a provided function.
+          <br>
+          <span class="font-semibold">Example: </span><br>
+        <div
+          class="bg-gray-800 text-left pl-2 md:pl-10 text-white text-leftpl-2 broder rounded-lg py-2 mx-2 md:mx-40 mb-2">
+          <code>
+            const asif = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; <br>
+            const newArray = asif.filter(function(number) { <br>
+              return number % 2 === 0; <br>
+            }); <br>
+            console.log(newArray); // Output: [2, 4, 6, 8, 10] <br>
+              </code>
+        </div>
+        </p>
+        <hr>
+        <p class="my-2 text-black"> <span class="font-bold">filter():</span> That methods returns the first element in
+          the array that pass given testing function.
+          <br>
+          <span class="font-semibold">Example: </span><br>
+        <div
+          class="bg-gray-800 text-left pl-2 md:pl-10 text-white text-leftpl-2 broder rounded-lg py-2 mx-2 md:mx-40 mb-2">
+          <code>
+            const people = [ <br>
+              { name: 'Alice', age: 25 }, <br>
+              { name: 'Bob', age: 30 }, <br>
+              { name: 'Charlie', age: 35 }, <br>
+              { name: 'David', age: 40 } <br>
+            ];  <br>
+            const person = people.find(function(person) {  <br>
+              return person.age === 35; <br>
+            }); <br>
+            console.log(person); // Output: { name: 'Charlie', age: 35 } <br>
+              </code>
+        </div>
+        </p>
+        <p class="text-black font-semibold">Main difference between filter() and find() is filter method return an array
+          where find methond return an element.</p>
+        <hr>
+      </div>
+    </div>
+    <h2 id="accordion-open-heading-2">
+      <button type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200"
+        data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
+        <span class="flex items-center"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+              clip-rule="evenodd"></path>
+          </svg>What are the differences among localStorage, sessionStorage, and Cookies?</span>
+        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+      <div class="p-5 border border-b-0 text-left border-gray-200">
+        <p class="my-2 text-black"> <span class="font-bold">localStorage:</span> Window object's property is
+          localStorage. Which is available in the web browsers. And web developers can store key-value pairs via this
+          storage in a user's browser where it hasn't any expiration date.
+        </p>
+        <p class="my-2 text-black"> <span class="font-bold">sessionStorage:</span> It is another window property of a
+          browser but the main difference between localStorage and sessionStorage is sessionStorage has expiration time.
+          But other than that everything is similar to localStorage.
+        </p>
+        <p class="my-2 text-black"> <span class="font-bold">cookies:</span> It is also used by web developer to save
+          users information in users browser but there are many differences between cookie and localStorage. <br>
+          <span class="ml-2">1. Cookies have small storage capacity (4KB). localStorage has 5-10MB.</span> <br>
+          <span class="ml-2">2. Cookies have expiration time where localStorage hasn't.</span> <br>
+          <span class="ml-2">3. Cookies are less secured compared to localStorage.</span> <br>
+        </p>
+
+      </div>
+    </div>
+    <h2 id="accordion-open-heading-3">
+      <button type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200"
+        data-accordion-target="#accordion-open-body-3" aria-expanded="false" aria-controls="accordion-open-body-3">
+        <span class="flex items-center"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+              clip-rule="evenodd"></path>
+          </svg> What is Event loop and how does it work?</span>
+        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+      <div class="p-5 border border-b-0 text-left border-gray-200">
+        <p class="my-2 text-black"> <span class="font-bold">Event Loop:</span> We know JavaScript is a single-threaded
+          language. But it can handle asynchronous code, this is because of event loop. However, event loop manage the
+          execution of callback functions. A queue of pending callback function continuously monitored by event loop. The main tasks of event loop are collecting and processing events, and executing all those events one's after another if one event need more time then event loop will put it on a queue and then it will run next event. That actually means event loop doesn't want for one particular event. If the waiting event complete its waiting period then it will come from the queue and execute it properly.
+        </p>
+      </div>
+    </div>
+    <h2 id="accordion-open-heading-4">
+      <button type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200"
+        data-accordion-target="#accordion-open-body-4" aria-expanded="false" aria-controls="accordion-open-body-4">
+        <span class="flex items-center"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+              clip-rule="evenodd"></path>
+          </svg> What are quizTimer, chooseQuiz function doing in the noChange.js file?</span>
+        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
+      <div class="p-5 border border-b-0 text-left border-gray-200">
+        <p class="my-2 text-black"> <span class="font-bold">quizTimer(): </span>This function
+          is
+          setting a timer that count seconds. Firstly, it taken a boolean value. By this value function will recognize
+          timer will be stopped or start counting. If it pass true value it clear interval by clearInterval() function
+          or, it set new interval of 1 sec. by setInterval() function.
+          Timer update HTML of an element which id is “count”. Total time also converted into Minute + second variation.
+          color of the text will also be changed based on how much time has been gone.
+        </p>
+        <p class="my-2 text-black"> <span class="font-bold">chooseQuiz(): </span> This function taking selected answer
+          by user. If that answer was given by user then current answer is replacing previous answer on the other hand
+          if the answer is first time answered by the user then it is taking the value and pushing this answer to
+          answers array. Finally it is calling another function to display the answers.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer section start -->
+  <footer class="py-10 text-center text-sm">
+    Copyright © 2023 Quiz Hero All Rights Reserved.
+  </footer>
+  <!-- Footer section end -->
+
+
+  <!-- script -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- flowbite -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </script>
+</body>
+
+</html>
